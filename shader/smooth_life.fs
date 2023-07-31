@@ -1,38 +1,25 @@
 #version 330
 
-// Input vertex attributes (from vertex shader)
 in vec2 fragTexCoord;
 in vec4 fragColor;
 
-// Input uniform values
 uniform sampler2D texture0;
 uniform vec4 colDiffuse;
 
-// Output fragment color
 out vec4 finalColor;
 
 uniform vec2 resolution;
 
-float ra = 11;
+#define PI 3.14159265359
 
-#if 1
-// Stolen from https://www.shadertoy.com/view/XtdSDn
-float b1 = 0.257;
-float b2 = 0.336;
-float d1 = 0.365;
-float d2 = 0.549;
-float alpha_n = 0.028;
-float alpha_m = 0.147;
-#else
-float b1 = 0.278;
-float b2 = 0.365;
-float d1 = 0.267;
-float d2 = 0.445;
-float alpha_n = 0.028;
-float alpha_m = 0.147;
-#endif
-
-float dt = 1;
+float ra      = 43.500000;
+float b1      = 0.257000;
+float b2      = 0.336000;
+float d1      = 0.365000;
+float d2      = 0.549000;
+float alpha_n = 0.028000;
+float alpha_m = 0.147000;
+float dt      = 0.050000;
 
 float sigma(float x, float a, float alpha)
 {
@@ -58,17 +45,12 @@ float grid(float x, float y)
 {
     float tx = x/resolution.x;
     float ty = y/resolution.y;
-    vec4 t = texture(texture0, vec2(tx, ty));
+    vec4 t   = texture(texture0, vec2(tx, ty));
     return max(max(t.x, t.y), t.z);
 }
 
-// A = πr^2
-
-#define PI 3.14159265359
-
 void main()
 {
-#if 1
     float cx = fragTexCoord.x*resolution.x;
     float cy = (1 - fragTexCoord.y)*resolution.y;
     float ri = ra/3.0;
@@ -88,14 +70,11 @@ void main()
             }
         }
     }
+
     m /= M;
     n /= N;
     float q = s(n, m);
     float diff = 2.0*q - 1.0;
     float v = clamp(grid(cx, cy) + dt*diff, 0.0, 1.0);
-#endif
-
     finalColor = vec4(v, v, v, 1);
-
-    // finalColor = texture(texture0, vec2(fragTexCoord.x, -fragTexCoord.y));
 }

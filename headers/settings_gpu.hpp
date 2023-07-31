@@ -5,29 +5,29 @@
 #include <string>
 
 using namespace std;
-     int get_init();
-        int get_fps();
 
-        float get_factor();
-        float get_scalar();
-
-class settings_term {
+class settings_gpu {
 
     public:
-        settings_term();
+        settings_gpu();
 
         void set_settings(std::string settings_path);
 
-        float get_ra();
-        float get_alpha_n();
-        float get_alpha_m();
-        float get_b1();
-        float get_b2();
-        float get_d1();
-        float get_d2();
-        float get_dt();
+        void generate_shader();
+
+        int get_init();
+        int get_fps();
+        
+        float get_factor();
+        float get_scalar();
 
     private:
+        int init;
+        int fps;
+
+        float factor;
+        float scalar;
+
         float ra;
         float alpha_n;
         float alpha_m;

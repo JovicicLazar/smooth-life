@@ -1,7 +1,6 @@
 #include <iostream>
 #include <jsoncpp/json/json.h>
 #include <fstream>
-#include <stdio.h>
 #include <time.h>
 #include <math.h>
 
@@ -121,7 +120,7 @@ int main() {
     settings_term settings;
     struct timespec delay;
 
-    settings.set_settings("settings/terminal_settings/settings.json");
+    settings.set_settings("presets/terminal_presets/stable.json");
 
     const float ra      = settings.get_ra();
     const float alpha_n = settings.get_alpha_n();
