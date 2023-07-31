@@ -5,6 +5,7 @@ Transferring the Game of Life to a continuous domain means extending it from a d
 
 References:
 https://arxiv.org/pdf/1111.1567.pdf
+
 https://www.youtube.com/c/TsodingDaily
 
 Dependencies: 
