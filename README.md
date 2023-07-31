@@ -2,9 +2,9 @@
 Game of life transfered to a continuous domain
 
 Dependencies 
-C++
-raylib
-JsonCpp
+C++  
+raylib  
+JsonCpp  
 
 To install raylib:
 ```bash
@@ -39,5 +39,6 @@ for terminal version or:
 ```bash
 ../smooth_life_gpu preset_name.json
 ```
-NOTE! You can create your own presets, just add them to /presets/gpu_presets folder and just pass preset name as an argument when running the code.
+NOTE! You can create your own presets, just add them to /presets/gpu_presets folder and just pass preset name as an argument when running the code Or  you can mess with the terminal presets just save them and run the code.
+
 
