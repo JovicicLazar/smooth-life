@@ -1,5 +1,7 @@
 # smooth-life
-Game of life transfered to a continuous domain
+The Game of Life is a cellular automaton, a zero-player game devised by John Conway in 1970. It operates on a grid of cells, where each cell can be in one of two states: alive or dead. The state of each cell evolves over time based on a set of rules.
+
+Transferring the Game of Life to a continuous domain means extending it from a discrete grid to a continuous space, where cells are represented as points in a continuous plane, and their states evolve continuously instead of step-by-step. In this extended version, each cell's state can be a real number between 0 and 1, representing the level of activity or "aliveness" of that cell. The neighboring cells' activity levels will influence each other, leading to continuous patterns and dynamics.
 
 Dependencies: 
 
