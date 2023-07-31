@@ -1,7 +1,7 @@
 # smooth-life
 Game of life transfered to a continuous domain
 
-Dependencies 
+Dependencies: 
 C++  
 raylib  
 JsonCpp  
