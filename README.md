@@ -20,6 +20,6 @@ $ sudo cp /usr/local/lib/libraylib.so.450 /usr/lib/
 NOTE! if you get and error that /usr/local/lib/libraylib.so.450 doesnt exist just go to /usr/local/lib and there should be file libraylib.so.4xx so unsetad of 450 just write whatever number is there. This error occurs because of version diff.
 
 To install JsonCpp
-```bash
-sudo apt-get install libjsoncpp-dev
+```sh
+$ sudo apt-get install libjsoncpp-dev
 ```
