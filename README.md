@@ -50,4 +50,21 @@ for terminal version or:
 ```
 NOTE! You can create your own presets, just add them to /presets/gpu_presets folder and just pass preset name as an argument when running the code Or  you can mess with the terminal presets just save them and run the code.
 
+```json{
+    "fps":60, // frames per second also ahs impact on cell creation
+    "init":4, // the way you init the board
+    "factor": 50, // basically sets the screen size
+    "scalar": 0.6, // sets resolution 
+    "ra": 43.50, // size of the cells
+    "alpha_n": 0.028, // width of the step for anti aliasing
+    "alpha_m": 0.147, // width of the step for anti aliasing
+    "b1": 0.257, //
+    "b2": 0.336, // birth and 
+    "d1": 0.365, // death intervals
+    "d2": 0.549, //
+    "dt": 0.05 // cell developing speed
+}
+```
+NOTE! You can get very interesting results by playing with init, ra and dt.
+
 
