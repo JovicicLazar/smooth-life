@@ -5,11 +5,6 @@
 #include <string>
 
 using namespace std;
-     int get_init();
-        int get_fps();
-
-        float get_factor();
-        float get_scalar();
 
 class settings_term {
 
