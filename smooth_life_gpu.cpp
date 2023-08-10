@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
         BeginTextureMode(state[1 - i]);
             ClearBackground(BLACK);
             BeginShaderMode(shader);
-                DrawTexture(state[i].texture, 0, 0, WHITE);
+                DrawTexture(state[i].texture, 0, 0, PURPLE);
             EndShaderMode();
         EndTextureMode();
 
@@ -103,10 +103,12 @@ int main(int argc, char* argv[])
 
         BeginDrawing();
             ClearBackground(BLACK);
-            DrawTextureEx(state[i].texture, {0.0f, 0.0f}, 0, 1/scalar, WHITE);
+            DrawTextureEx(state[i].texture, {0.0f, 0.0f}, 0, 1/scalar, PURPLE);
         EndDrawing();
     }
-
+    
+    UnloadShader(shader);
+    UnloadImage(image);
     CloseWindow();
 
     return 1;

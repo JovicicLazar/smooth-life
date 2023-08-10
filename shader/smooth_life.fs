@@ -12,11 +12,11 @@ uniform vec2 resolution;
 
 #define PI 3.14159265359
 
-float ra      = 43.500000;
-float b1      = 0.257000;
-float b2      = 0.336000;
-float d1      = 0.365000;
-float d2      = 0.549000;
+float ra      = 41.000000;
+float b1      = 0.278000;
+float b2      = 0.365000;
+float d1      = 0.267000;
+float d2      = 0.445000;
 float alpha_n = 0.028000;
 float alpha_m = 0.147000;
 float dt      = 0.050000;
